@@ -3,17 +3,26 @@
     "description": "KrudBooster is CRUD Generator for laravel.",
     "type": "library",
     "require": {
-        "laravel/framework": "^8.83",
-        "php": "8.3",
+        "laravel/framework": ">=8.83",
+        "php": ">=7.4",
         "doctrine/dbal": "~2.3",
         "barryvdh/laravel-dompdf": "0.8.*",
         "maatwebsite/excel": "^3.1",
         "intervention/imagecache": "^2.3"
     },
     "license": "MIT",
+    "keywords":[
+        "laravel",
+        "admin-panel",
+        "backend",
+        "crud-generator",
+        "crudbooster",
+        "crud",
+        "generator"
+    ],
     "autoload": {
         "psr-4": {
-            "Foubian\\Krudbooster\\": "src/"
+            "foubian\\krudbooster\\": "src/"
         }
     },
     "authors": [
@@ -22,5 +31,12 @@
             "email": "fouad.elrharbi@gmail.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "foubian\\krudbooster\\CRUDBoosterServiceProvider"
+            ]
+        }
+    }
 }
