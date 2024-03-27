@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster;
+<?php namespace foubian\krudbooster;
 
 use foubian\krudbooster\commands\CrudboosterVersionCommand;
 use foubian\krudbooster\commands\Mailqueues;
