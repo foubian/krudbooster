@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster\controllers;
+<?php namespace foubian\krudbooster\controllers;
 
 use CRUDBooster;
 use Illuminate\Support\Facades\Cache;

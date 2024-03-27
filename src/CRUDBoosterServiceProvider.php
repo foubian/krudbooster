@@ -1,12 +1,12 @@
 <?php namespace crocodicstudio\crudbooster;
 
-use crocodicstudio\crudbooster\commands\CrudboosterVersionCommand;
-use crocodicstudio\crudbooster\commands\Mailqueues;
+use foubian\krudbooster\commands\CrudboosterVersionCommand;
+use foubian\krudbooster\commands\Mailqueues;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
-use crocodicstudio\crudbooster\commands\CrudboosterInstallationCommand;
-use crocodicstudio\crudbooster\commands\CrudboosterUpdateCommand;
+use foubian\krudbooster\commands\CrudboosterInstallationCommand;
+use foubian\krudbooster\commands\CrudboosterUpdateCommand;
 use Illuminate\Foundation\AliasLoader;
 use App;
 
@@ -63,8 +63,8 @@ class CRUDBoosterServiceProvider extends ServiceProvider
         $loader->alias('PDF', 'Barryvdh\DomPDF\Facade');
         $loader->alias('Excel', 'Maatwebsite\Excel\Facades\Excel');
         $loader->alias('Image', 'Intervention\Image\ImageManagerStatic');
-        $loader->alias('CRUDBooster', 'crocodicstudio\crudbooster\helpers\CRUDBooster');
-        $loader->alias('CB', 'crocodicstudio\crudbooster\helpers\CB');
+        $loader->alias('CRUDBooster', 'foubian\krudbooster\helpers\CRUDBooster');
+        $loader->alias('CB', 'foubian\krudbooster\helpers\CB');
     }
    
     private function registerSingleton()

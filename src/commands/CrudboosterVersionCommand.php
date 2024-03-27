@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster\commands;
+<?php namespace foubian\krudbooster\commands;
 
 use App;
 use Illuminate\Console\Command;

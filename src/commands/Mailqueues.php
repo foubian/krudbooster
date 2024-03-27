@@ -1,7 +1,7 @@
-<?php namespace crocodicstudio\crudbooster\commands;
+<?php namespace foubian\krudbooster\commands;
 
 use Cache;
-use crocodicstudio\crudbooster\helpers\CRUDBooster;
+use foubian\krudbooster\helpers\CRUDBooster;
 use DB;
 use Illuminate\Console\Command;
 use Request;

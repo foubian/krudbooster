@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster\controllers;
+<?php namespace foubian\krudbooster\controllers;
 
 use File;
 use Image;

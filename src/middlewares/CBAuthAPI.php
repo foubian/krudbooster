@@ -1,9 +1,9 @@
 <?php
 
-namespace crocodicstudio\crudbooster\middlewares;
+namespace foubian\krudbooster\middlewares;
 
 use Closure;
-use crocodicstudio\crudbooster\helpers\CRUDBooster;
+use foubian\krudbooster\helpers\CRUDBooster;
 
 class CBAuthAPI
 {

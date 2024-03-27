@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster\commands;
+<?php namespace foubian\krudbooster\commands;
 
 use App;
 use Cache;
@@ -45,7 +45,7 @@ class CrudboosterInstallationCommand extends Command
             }
 
             $this->info('Publishing crudbooster assets...');
-            $this->call('vendor:publish', ['--provider' => 'crocodicstudio\crudbooster\CRUDBoosterServiceProvider']);
+            $this->call('vendor:publish', ['--provider' => 'foubian\krudbooster\CRUDBoosterServiceProvider']);
 
             $this->info('Dumping the autoloaded files and reloading all new files...');
             $composer = $this->findComposer();

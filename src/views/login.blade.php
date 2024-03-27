@@ -6,7 +6,7 @@
     <title>{{ CRUDBooster::getSetting('appname')  }}-Login Page</title>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name='generator'
-        content='CRUDBooster {{ \crocodicstudio\crudbooster\commands\CrudboosterVersionCommand::$version }}' />
+        content='CRUDBooster {{ \foubian\krudbooster\commands\CrudboosterVersionCommand::$version }}' />
     <meta name='robots' content='noindex,nofollow' />
     <link rel="shortcut icon"
         href="{{ CRUDBooster::getSetting('favicon') ? asset(CRUDBooster::getSetting('favicon')) : asset('vendor/crudbooster/assets/logo_crudbooster.png') }}">

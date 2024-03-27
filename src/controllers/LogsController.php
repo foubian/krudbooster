@@ -1,4 +1,4 @@
-<?php namespace crocodicstudio\crudbooster\controllers;
+<?php namespace foubian\krudbooster\controllers;
 
 use Illuminate\Support\Facades\Excel;
 use Illuminate\Support\Facades\PDF;

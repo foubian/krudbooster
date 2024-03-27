@@ -1,7 +1,7 @@
 <?php
 
 
-namespace crocodicstudio\crudbooster\export;
+namespace foubian\krudbooster\export;
 
 
 use Illuminate\Contracts\View\View;
