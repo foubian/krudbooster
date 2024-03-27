@@ -15,14 +15,14 @@ class CrudboosterInstallationCommand extends Command
      *
      * @var string
      */
-    protected $name = 'crudbooster:install';
+    protected $name = 'krudbooster:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'CRUDBooster Installation Command';
+    protected $description = 'KRUDBooster Installation Command';
 
     /**
      * Execute the console command.
@@ -44,7 +44,7 @@ class CrudboosterInstallationCommand extends Command
                 mkdir(public_path('vendor'), 0777);
             }
 
-            $this->info('Publishing crudbooster assets...');
+            $this->info('Publishing krudbooster assets...');
             $this->call('vendor:publish', ['--provider' => 'foubian\krudbooster\CRUDBoosterServiceProvider']);
 
             $this->info('Dumping the autoloaded files and reloading all new files...');
@@ -65,7 +65,7 @@ class CrudboosterInstallationCommand extends Command
                 $this->call('optimize');
             }
 
-            $this->info('Installing CRUDBooster Is Completed ! Thank You :)');
+            $this->info('Installing KRUDBooster Is Completed ! Thank You :)');
         } else {
             $this->info('Setup Aborted !');
             $this->info('Please setting the database configuration for first !');
@@ -77,14 +77,19 @@ class CrudboosterInstallationCommand extends Command
     private function header()
     {
         $this->info("
-#     __________  __  ______  ____                   __           
-#    / ____/ __ \/ / / / __ \/ __ )____  ____  _____/ /____  _____
-#   / /   / /_/ / / / / / / / __  / __ \/ __ \/ ___/ __/ _ \/ ___/
-#  / /___/ _, _/ /_/ / /_/ / /_/ / /_/ / /_/ (__  ) /_/  __/ /    
-#  \____/_/ |_|\____/_____/_____/\____/\____/____/\__/\___/_/     
-#                                                                                                                       
+
+
+# ···································································
+# : _  ______  _   _ ____  ____   ___   ___  ____ _____ _____ ____  :
+# :| |/ /  _ \| | | |  _ \| __ ) / _ \ / _ \/ ___|_   _| ____|  _ \ :
+# :| ' /| |_) | | | | | | |  _ \| | | | | | \___ \ | | |  _| | |_) |:
+# :| . \|  _ <| |_| | |_| | |_) | |_| | |_| |___) || | | |___|  _ < :
+# :|_|\_\_| \_|\___/|____/|____/ \___/ \___/|____/ |_| |_____|_| \_\:
+# ···································································
+
+                                                                                                                 
 			");
-        $this->info('--------- :===: Thanks for choosing CRUDBooster :==: ---------------');
+        $this->info('--------- :===: Thanks for choosing KRUDBooster :==: ---------------');
         $this->info('====================================================================');
     }
 
@@ -178,8 +183,8 @@ class CrudboosterInstallationCommand extends Command
     {
         $this->info('--');
         $this->info('Homepage : http://www.crudbooster.com');
-        $this->info('Github : https://github.com/crocodic-studio/crudbooster');
-        $this->info('Documentation : https://github.com/crocodic-studio/crudbooster/blob/master/docs/en/index.md');
+        $this->info('Github : https://github.com/foubian/krudbooster');
+        $this->info('Documentation : https://github.com/foubian/krudbooster/blob/master/docs/en/index.md');
         $this->info('====================================================================');
         if ($success == true) {
             $this->info('------------------- :===: Completed !! :===: ------------------------');

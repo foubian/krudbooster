@@ -15,14 +15,14 @@ class CrudboosterUpdateCommand extends Command
      *
      * @var string
      */
-    protected $name = 'crudbooster:update';
+    protected $name = 'krudbooster:update';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'CRUDBooster Update Command';
+    protected $description = 'KRUDBooster Update Command';
 
     /**
      * Execute the console command.
@@ -41,7 +41,7 @@ class CrudboosterUpdateCommand extends Command
             mkdir(public_path('vendor'), 0777);
         }
 
-        $this->info('Publishing CRUDBooster needs file...');
+        $this->info('Publishing KRUDBooster needs file...');
         $this->call('vendor:publish');
         $this->call('vendor:publish', ['--tag' => 'cb_migration', '--force' => true]);
         $this->call('vendor:publish', ['--tag' => 'cb_lfm', '--force' => true]);
@@ -49,7 +49,7 @@ class CrudboosterUpdateCommand extends Command
 
         $configLFM = config_path('lfm.php');
         $configLFM = file_get_contents($configLFM);
-        $configLFMModified = str_replace("['web','auth']", "['web','\foubian\krudbooster\middlewares\CBBackend']", $configLFM);
+        $configLFMModified = str_replace("['web','auth']", "['web','\\foubian\krudbooster\middlewares\CBBackend']", $configLFM);
         $configLFMModified = str_replace('Unisharp\Laravelfilemanager\Handlers\ConfigHandler::class', 'function() {return Session::get("admin_id");}', $configLFMModified);
         $configLFMModified = str_replace('auth()->user()->id', 'Session::get("admin_id")', $configLFMModified);
         $configLFMModified = str_replace("'alphanumeric_filename' => false", "'alphanumeric_filename' => true", $configLFMModified);
@@ -82,14 +82,15 @@ class CrudboosterUpdateCommand extends Command
     private function header()
     {
         $this->info("
-#     __________  __  ______  ____                   __           
-#    / ____/ __ \/ / / / __ \/ __ )____  ____  _____/ /____  _____
-#   / /   / /_/ / / / / / / / __  / __ \/ __ \/ ___/ __/ _ \/ ___/
-#  / /___/ _, _/ /_/ / /_/ / /_/ / /_/ / /_/ (__  ) /_/  __/ /    
-#  \____/_/ |_|\____/_____/_____/\____/\____/____/\__/\___/_/     
-#                                                                                                                       
+# ···································································
+# : _  ______  _   _ ____  ____   ___   ___  ____ _____ _____ ____  :
+# :| |/ /  _ \| | | |  _ \| __ ) / _ \ / _ \/ ___|_   _| ____|  _ \ :
+# :| ' /| |_) | | | | | | |  _ \| | | | | | \___ \ | | |  _| | |_) |:
+# :| . \|  _ <| |_| | |_| | |_) | |_| | |_| |___) || | | |___|  _ < :
+# :|_|\_\_| \_|\___/|____/|____/ \___/ \___/|____/ |_| |_____|_| \_\:
+# ···································································                                                                                                                    
 			");
-        $this->info('--------- :===: Thanks for choosing CRUDBooster :==: ---------------');
+        $this->info('--------- :===: Thanks for choosing KRUDBooster :==: ---------------');
         $this->info('====================================================================');
     }
 
@@ -180,8 +181,8 @@ class CrudboosterUpdateCommand extends Command
     {
         $this->info('--');
         $this->info('Homepage : http://www.crudbooster.com');
-        $this->info('Github : https://github.com/crocodic-studio/crudbooster');
-        $this->info('Documentation : https://github.com/crocodic-studio/crudbooster/blob/master/docs/en/index.md');
+        $this->info('Github : https://github.com/foubian/krudbooster');
+        $this->info('Documentation : https://github.com/foubian/krudbooster/blob/master/docs/en/index.md');
         $this->info('====================================================================');
         if ($success == true) {
             $this->info('------------------- :===: Completed !! :===: ------------------------');

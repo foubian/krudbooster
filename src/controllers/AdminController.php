@@ -86,8 +86,6 @@ class AdminController extends CBController
             Session::put('admin_privileges_roles', $roles);
             Session::put("admin_privileges", $users->id_cms_privileges);
             Session::put('admin_privileges_name', $priv->name);
-            Session::put('fyl', $filnivo->filyir_id);
-            Session::put('nivo', $filnivo->nivo);
             Session::put('admin_lock', 0);
             Session::put('theme_color', $priv->theme_color);
             Session::put("appname", get_setting('appname'));

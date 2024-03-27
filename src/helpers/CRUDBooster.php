@@ -606,7 +606,7 @@ class CRUDBooster
     public static function mainpath($path = null)
     {
 
-        $controllername = str_replace(["\foubian\krudbooster\controllers\\", "App\Http\Controllers\\"], "", strtok(Route::currentRouteAction(), '@'));
+        $controllername = str_replace(["\\foubian\krudbooster\controllers\\", "App\Http\Controllers\\"], "", strtok(Route::currentRouteAction(), '@'));
         $route_url      = route($controllername . 'GetIndex');
 
         if ($path) {

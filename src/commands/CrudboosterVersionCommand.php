@@ -10,14 +10,14 @@ class CrudboosterVersionCommand extends Command
      *
      * @var string
      */
-    protected $name = 'crudbooster:version';
+    protected $name = 'krudbooster:version';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'CRUDBooster Version Command';
+    protected $description = 'KRUDBooster Version Command';
 
     /**
      * Execute the console command.
@@ -25,7 +25,7 @@ class CrudboosterVersionCommand extends Command
      * @return mixed
      */
 
-    public static $version = "5.5.7";
+    public static $version = "1.0.0";
 
     public function handle()
     {
