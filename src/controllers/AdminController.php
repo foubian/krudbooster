@@ -72,7 +72,6 @@ class AdminController extends CBController
         $email = Request::input("email");
         $password = Request::input("password");
         $users = DB::table(config('crudbooster.USER_TABLE'))->where("email", $email)->first();
-        $filnivo = DB::table('infopedagog')->where("student_id",$users->id)->where("current_year",1)->first();
 
         if (\Hash::check($password, $users->password)) {
             $priv = DB::table("cms_privileges")->where("id", $users->id_cms_privileges)->first();
